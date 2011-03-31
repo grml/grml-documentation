@@ -1,0 +1,12 @@
+Grml documentation collection
+=============================
+
+In order to build pdf files, run
+   make pdf
+You can also create epub files via
+   make epub
+Or simply create all available formats by
+   make -j
+To remove all non-source, run
+   make clean
+

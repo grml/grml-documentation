@@ -1,0 +1,106 @@
+How to contribute patches to Grml
+=================================
+Thomas Köhler
+v0.1, 2011-03
+:doctype: book
+
+
+
+Contributing patches
+--------------------
+Helping Grml by contributing patches is always welcome. And it's not that complicated either! You just have to do the following:
+
+. find the git repository to clone
+. clone the git repository
+. patch as needed
+. commit your work
+. send your patches
+
+.Find the git repository to clone
+Pointing your browser to +http://git.grml.org/+ you will find the available git repositories. One of those is +grml-crypt.git+ which we use as an example in this document.
+
+.Clone the git repository
+In order to clone the repository, we replace the protocol in the url by +git+ and append the name of the repository to clone:
+
+----
+/tmp/x> git clone git://git.grml.org/grml-crypt.git
+Cloning into grml-crypt...
+remote: Counting objects: 257, done.
+remote: Compressing objects: 100% (158/158), done.
+remote: Total 257 (delta 159), reused 151 (delta 94)
+Receiving objects: 100% (257/257), 38.33 KiB, done.
+Resolving deltas: 100% (159/159), done.
+/tmp/x>
+----
+
+.Patch as needed
+As you now have a clone of the repository, you can hack away...
+
+----
+/tmp/x> cd grml-crypt 
+/tmp/x/grml-crypt> vi grml-crypt
+...
+----
+
+IMPORTANT: Test your patched stuff. People might laugh at you if you introduce stupid bugs. ;-)
+
+.Commit your work
+After patching, let's commit the work:
+
+----
+/tmp/x/grml-crypt> git commit -v -a
+[editor opens up, enter your commit message, then write and quit.]
+[master f719a84] This is an example. Only for documentation.
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+----
+
+You can now see your patch in +git log+, for example:
+
+----
+/tmp/x/grml-crypt> git log | head -20
+commit f719a84183f5ea361fe69cac2497feda42ff645f <1>
+Author: Thomas Koehler <jean-luc@picard.franken.de>
+Date:   Thu Mar 31 11:10:15 2011 +0200
+
+    This is an example.
+    Only for documentation.
+
+commit fb8006b1a297c6c1c489884ad780614ca27766a0 <2>
+Author: Thomas Koehler <jean-luc@picard.franken.de>
+Date:   Thu Feb 3 16:56:01 2011 +0100
+
+    bugfix: throw in a "udevadm settle" to avoid occasional failing mount attempts
+
+commit 205032a2a3ae5b125e87a1ecb4e397e8db5a6801
+Author: Thomas Koehler <jean-luc@picard.franken.de>
+Date:   Thu Feb 3 16:44:11 2011 +0100
+
+    updated documentation for previous patch
+
+commit 72dd60ff9f47be5ef600ff53c39a80a4f03a6fd1
+----
+
+<1> As you can see, the new patch is commit *f719a84183f5ea361fe69cac2497feda42ff645f*.
+<2> *fb8006b1a297c6c1c489884ad780614ca27766a0* is the last commit before our current one.
+
+Knowing that, we can create the patches like this:
+
+----
+/tmp/x/grml-crypt> git format-patch fb8006b1a297c6c1c489884ad780614ca27766a0
+0001-This-is-an-example.patch <1>
+/tmp/x/grml-crypt>
+----
+
+<1> +git format-patch+ creates patch files and outputs their names.
+
+.Send your patches
+Having created your patch, you only need to send it to the Grml developers.
+
+Send an email to +grml-devel@ml.grml.org+ explaining what your patch does and hope for inclusion :-)
+
+IMPORTANT: Don't forget to attach the patch file. In our example, that's the +0001-This-is-an-example.patch+ file that +git format-patch+ displayed.
+
+NOTE: Don't expect an immediate response to patches you send in. The Grml developers tend to be very busy, so sometimes it takes some time to check the patches out and apply them. 
+
+TIP: Talking to the Grml developers in IRC at #grml on irc.freenode.org sometimes speeds things up a little :)
+
