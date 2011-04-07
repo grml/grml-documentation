@@ -1,7 +1,15 @@
 TODO
 ====
 
-* how to contribute patches
 * workflow description
 * documentation of some use cases for grml
+  * Grml as rescue system fixing
+    * bootloader
+    * lvm
+    * software raid
+    * ...
+  * Grml as terminalserver
+  * Grml as desktop system
+    * remastering (adding your software)
+    * grml-crypt
 
