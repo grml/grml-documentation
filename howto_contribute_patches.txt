@@ -42,7 +42,7 @@ As you now have a clone of the repository, you can hack away...
 ...
 ----
 
-IMPORTANT: Test your patched stuff. People might laugh at you if you introduce stupid bugs. ;-)
+IMPORTANT: Test your patched stuff. It helps all of us if you don't introduce bugs that could have been avoided easily. ;)
 
 .Commit your work
 After patching, let's commit the work:
@@ -92,6 +92,14 @@ Knowing that, we can create the patches like this:
 ----
 
 <1> +git format-patch+ creates patch files and outputs their names.
+
+You don't need to know the SHA1 sums to format the patch, however. Just run the command a bit differently:
+
+----
+/tmp/x/grml-crypt> git format-patch origin/master
+0001-This-is-an-example.patch
+/tmp/x/grml-crypt>
+----
 
 .Send your patches
 Having created your patch, you only need to send it to the Grml developers.
