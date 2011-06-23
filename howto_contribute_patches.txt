@@ -17,7 +17,7 @@ Helping Grml by contributing patches is always welcome. And it's not that compli
 . send your patches
 
 .Find the git repository to clone
-Pointing your browser to +http://git.grml.org/+ you will find the available git repositories. One of those is +grml-crypt.git+ which we use as an example in this document.
+Pointing your browser to +http://git.grml.org/+ you will find the available git repositories. One of those is +grml-crypt.git+ which we use as an example in this document. Some of the repositories are available via github as well, you can point your browser to +https://github.com/grml/+ if you prefer github's possibilities and the repository you want is there.
 
 .Clone the git repository
 In order to clone the repository, we replace the protocol in the url by +git+ and append the name of the repository to clone:
