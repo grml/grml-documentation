@@ -1,0 +1,41 @@
+Grml use cases
+==============
+Thomas Köhler
+v0.1, 2011-07
+:doctype: book
+
+Grml as a rescue system
+-----------------------
+
+Fixing the bootloader
+~~~~~~~~~~~~~~~~~~~~~
+*TODO*
+
+Fixing LVM
+~~~~~~~~~~
+*TODO*
+
+Fixing software raid
+~~~~~~~~~~~~~~~~~~~~
+*TODO*
+
+Grml as terminalserver
+----------------------
+*TODO*
+
+Grml as a desktop system
+------------------------
+
+Adding your own configuration files - grml2iso
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*TODO*
+
+Adding your own software - remastering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*TODO*
+
+Taking your data with you - grml-crypt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*TODO*
+
+
